@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme generator</title>
+    <script src="https://kit.fontawesome.com/17e83f601c.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="edit.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Generador de memes</h1>
+        <div>
+            <button><i class="fa-sharp fa-regular fa-file-image"></i>Imagen</button>
+            <button><i class="fa-solid fa-font"></i>Texto</button>
+            <button><i class="fa-regular fa-lightbulb "></i>Modo oscuro</button>
+            <button><i class="fa-solid fa-lightbulb"></i>Modo claro</button>
+        </div>
+    </header>
+    <section class="main-aside-container">
+        <!-- MAIN -->
+        <main>
+            <div>
+                <h2>TOP TEXT</h1>
+            </div>
+            <div></div>
+            <div>
+                <h2> BUTTOM TEXT</h2>
+            </div>
+            <button><i class="fa-solid fa-download"></i>Descargar Meme</button>
+        </main>
+        <aside>
+            <!-- IMAGE PANEL -->
+            <h3>IMAGEN</h3>
+            <h4>URL</h4>
+            <label for=""></label>
+            <input type="text">
+            <h4>FONDO</h4>
+            <div>
+                <label for="background"></label>
+                <input type="color">
+                <span>#FFFFFF</span>
+            </div>
+            <label for="background-options"></label>
+            <select name="" id="">
+                <option value="none">Ninguno</option>
+                <option value="lighten">Aclarar</option>
+                <option value="darken">Oscurecer</option>
+                <option value="difference">Diferencia</option>
+                <option value="brightness">Luminosidad</option>
+                <option value="multiply">Multiplicar</option>
+            </select>
+            <h4>FILTROS</h4>
+            <div>
+                <label for="">BRILLO</label>
+                <input type="range">
+            </div>
+            <div>
+                <label for="">OPACIDAD</label>
+                <input type="range">
+            </div>
+            <div>
+                <label for="">CONTRASTE</label>
+                <input type="range">
+            </div>
+            <div>
+                <label for="">DESENFOQUE</label>
+                <input type="range">
+            </div>
+            <div>
+                <label for="">ESCALA DE GRISES</label>
+                <input type="range">
+            </div>
+            <div>
+                <label for="">SEPIA</label>
+                <input type="range">
+            </div>
+            <div>
+                <label for="">HUE</label>
+                <input type="range">
+            </div>
+            <div>
+                <label for="">SATURADO</label>
+                <input type="range">
+            </div>
+            <div>
+                <label for="">NEGATIVO</label>
+                <input type="range">
+            </div>
+            <button>Restablacer filtros</button>
+        </aside>
+        <aside>
+            <!-- TEXT PANEL -->
+            <h3>TEXT</h3>
+            <!-- top text -->
+            <H4>SUPERIOR</H4>
+            <label for="top-text"></label>
+            <textarea name="" id="top-text" cols="30" rows="10" placeholder="TOP TEXT"></textarea>
+            <label for="top-checkbox"></label>
+            <input type="checkbox" id="top-checkbox">
+            <small>Sin texto superior</small>
+            <label for="buttom-text"></label>
+            <textarea name="" id="buttom-text" cols="30" rows="10" placeholder="BUTTOM TEXT"></textarea>
+            <label for="buttom-checkbox"></label>
+            <input type="checkbox" id="buttom-checkbox">
+            <small>Sin texto inferior</small>
+            <!-- Fonts -->
+            <h4>FUENTE</h4>
+            <label for="fonts"></label>
+            <select name="fonts" id="fonts">
+                <option value="arial">Arial</option>
+                <option value="arial black">Arial black</option>
+                <option value="american typewriter">American typewriter</option>
+                <option value="andale mono">Andale Mono</option>
+                <option value="comic sans ms">Comic Sans MS</option>
+                <option value="helvetica">Helvetica</option>
+                <option value="impact">Impact</option>
+                <option value="verdana">Verdana</option>
+                <option value="times new roman">Times New Roman</option>
+            </select>
+            <label for="input-number"></label>
+            <input type="number" id="input-number" placeholder="20" min="12">
+            <button><i class="fa-solid fa-align-left"></i></button>
+            <button><i class="fa-solid fa-align-center"></i></button>
+            <button><i class="fa-solid fa-align-right"></i></button>
+            <!-- Color -->
+            <h4>COLOR</h4>
+            <div>
+                <label for="input-color"></label>
+                <input type="color" id="input-color">
+                <span>#FFFFFF</span>
+            </div>
+            <!-- Background -->
+            <h4>FONDO</h4>
+            <div>
+                <label for="input-background"></label>
+                <input type="color" id="input-background" value="#000000">
+                <span>#FFFFFF</span>
+            </div>
+            <label for=""></label>
+            <input type="checkbox" id="background-checkbox">
+            <small>Fondo transparente</small>
+            <!-- Outline -->
+            <h4>CONTORNO</h4>
+            <button>Ninguno</button>
+            <button>Claro</button>
+            <button>Oscuro</button>
+            <!-- Spacing -->
+            <h4>Espaciado</h4>
+            <label for="space"></label>
+            <input type="number" id="space" min="10" max="50">
+            <!-- Leading -->
+            <h4>INTERLINEADO</h4>
+            <label for="leading"></label>
+            <select name="leading" id="leading">
+                <option value="0.8">0.8</option>
+                <option value="1">1</option>
+                <option value="1.2">1.2</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
+            </select>
+        </aside>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
