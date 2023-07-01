@@ -1,5 +1,192 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #30343f;
+  color: rgb(223, 217, 217);
+  font-family: "Open Sans", sans-serif;
+}
+
+/*_________________________HEADER______________________*/
+header {
+  background-color: #191e2b;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+h1 {
+  font-family: "Passion One", cursive;
+  font-family: "Fredoka", sans-serif;
+  font-size: 40px;
+  background: -webkit-linear-gradient(#c483dd, #9f63bb, #a02ac4, #6d148f);
+  background: linear-gradient(45deg, #9a1fffc0, #b27eef);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.flex-container {
+  display: flex;
+  margin-top: 5px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.header-buttons-container {
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px;
+  margin: 2px;
+  border-radius: 5px;
+  background-color: #191e2b;
+  color: rgb(223, 217, 217);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #303749;
+}
+
+i {
+  margin-right: 5px;
+  font-size: 20px;
+  color: rgb(223, 217, 217);
+  background: linear-gradient(45deg, #9a1fffc0, #b27eef);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*_________________________MAIN______________________*/
+main {
+  flex-direction: column;
+  position: relative;
+}
+
+/*_________________________MEME CONTAINER______________________*/
+.meme-container {
+  width: 40%;
+  height: 400px;
+}
+
+.meme-text-container {
+  background-color: white;
+  font-family: "Staatliches", cursive;
+  font-size: 20px;
+  color: black;
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.image-container {
+  background-color: black;
+  height: 350px;
+}
+
+.principal-container-button {
+  position: absolute;
+  top: 500px;
+  width: 20%;
+  align-self: center;
+}
+/*_________________________ASIDE______________________*/
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  background-color: #252935;
+  padding: 14px;
+  width: 15%;
+  width: 250px;
+  height: 100%S;
+  font-size: 12px;
+}
+
+h4 {
+  margin: 5px;
+}
+
+.text-panel {
+  top: 0;
+  left: 0;
+}
+
+.panel-slider {
+  margin: 5px;
+}
+
+.image-panel {
+  top: 0;
+  right: 0;
+}
+
+.select-container {
+  margin-left: 10px;
+  width: 80%;
+}
+.color-container {
+  background-color: #393e49;
+  padding: 5px;
+  border-radius: 5px;
+  width: 80%;
+  margin-right: 8px;
+}
+
+textarea {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+select,
+textarea {
+  width: 80%;
+}
+
+input,
+select,
+textarea {
+  background-color: #393e49;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  color: rgb(223, 217, 217);
+}
+.input-number {
+  width: 100px;
+}
+
+.buttons-container {
+  display: flex;
+  margin-left: 5px;
+}
+
+input[type="color"] {
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+input[type="range"] {
+  width: 100%;
 }
