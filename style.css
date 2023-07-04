@@ -110,13 +110,10 @@ main {
 aside {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   position: absolute;
   background-color: #252935;
   padding: 14px;
-  width: 15%;
-  width: 250px;
-  height: 100%S;
+  width: 20%;
   font-size: 12px;
 }
 
@@ -138,15 +135,10 @@ h4 {
   right: 0;
 }
 
-.select-container {
-  margin-left: 10px;
-  width: 80%;
-}
 .color-container {
   background-color: #393e49;
-  padding: 5px;
+  padding: 0 5px 0 5px;
   border-radius: 5px;
-  width: 80%;
   margin-right: 8px;
 }
 
@@ -180,13 +172,24 @@ textarea {
   margin-left: 5px;
 }
 
-input[type="color"] {
+.color-picker {
+  width: 35px;
+  height: 35px;
   border: none;
+  border-radius: 50%;
   outline: none;
-  padding: 8px;
-  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
+.color-picker::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.color-picker::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
 input[type="range"] {
   width: 100%;
   accent-color: #9a1fffc0;
