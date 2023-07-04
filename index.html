@@ -24,10 +24,10 @@
             <h1>Generador de memes</h1>
         </div>
         <div class="header-buttons-container">
-            <button><i class="fa-sharp fa-regular fa-file-image"></i>Imagen</button>
-            <button><i class="fa-solid fa-font"></i>Texto</button>
-            <button><i class="fa-regular fa-lightbulb "></i>Modo oscuro</button>
-            <button><i class="fa-solid fa-lightbulb"></i>Modo claro</button>
+            <button id="image-panel-btn"><i class="fa-sharp fa-regular fa-file-image"></i>Imagen</button>
+            <button id="text-panel-btn"><i class="fa-solid fa-font"></i>Texto</button>
+            <button id="dark-mode-btn" class="hidden-btn"><i class="fa-regular fa-lightbulb "></i>Modo oscuro</button>
+            <button id="ligth-dark-mode-btn"><i class="fa-solid fa-lightbulb"></i>Modo claro</button>
         </div>
     </header>
     <!-- MAIN -->
@@ -51,8 +51,8 @@
         <!-- image URL -->
         <div class="panel-settings">
             <h4>URL</h4>
-            <label for=""></label>
-            <input type="text">
+            <label for="image-url"></label>
+            <input type="text" id="image-url" placeholder="Insert URL">
         </div>
         <div class="panel-settings">
             <!--image  background -->
@@ -60,14 +60,14 @@
             <!-- Color -->
             <div class="flex-container">
                 <div class="color-container flex-container align-center">
-                    <label for="background"></label>
-                    <input class="input-color" type="color">
+                    <label for="background-color"></label>
+                    <input class="input-color" type="color" id="background-color">
                     <span>#FFFFFF</span>
                 </div>
                 <!-- Background options -->
                 <div class="panel-settings select-container">
-                    <label for="background-options"></label>
-                    <select name="" id="">
+                    <label for="background-filters-options"></label>
+                    <select name="" id="background-filters-options">
                         <option value="none">Ninguno</option>
                         <option value="lighten">Aclarar</option>
                         <option value="darken">Oscurecer</option>
@@ -116,13 +116,13 @@
                     <label for="negative">NEGATIVO</label>
                     <input type="range" id="negative" min="0" max="1" step="0.1" value="1">
                 </div>
-                <button>
+                <button id="reset-btn">
                     Restart filters
                 </button>
             </div>
     </aside>
     <!---------- TEXT PANEL ---------->
-    <aside class="text-panel">
+    <aside class="text-panel hidden">
         <h3>TEXT</h3>
         <!-- Top text -->
         <div class="panel-settings">
@@ -160,14 +160,14 @@
             <!-- Font size -->
             <div class="flex-container">
                 <div>
-                    <label for="input-number"></label>
-                    <input class="input-number" type="number" id="input-number" placeholder="20" min="12">
+                    <label for="font-size"></label>
+                    <input class="input-number" type="number" id="font-size" placeholder="20" min="12">
                 </div>
                 <!-- Text alignment buttons -->
                 <div class="buttons-container">
-                    <button><i class="fa-solid fa-align-left"></i></button>
-                    <button><i class="fa-solid fa-align-center"></i></button>
-                    <button><i class="fa-solid fa-align-right"></i></button>
+                    <button id="left-btn"><i class="fa-solid fa-align-left"></i></button>
+                    <button id="center-btn"><i class="fa-solid fa-align-center"></i></button>
+                    <button id="right-btn"><i class="fa-solid fa-align-right"></i></button>
                 </div>
             </div>
         </div>
@@ -176,8 +176,8 @@
                 <!-- Color -->
                 <h4>COLOR</h4>
                 <div class="color-container flex-container align-center">
-                    <label for="input-color"></label>
-                    <input type="color" id="input-color">
+                    <label for="color-text"></label>
+                    <input type="color" id="color-text">
                     <span>#FFFFFF</span>
                 </div>
             </div>
@@ -185,29 +185,29 @@
                 <!-- Background -->
                 <h4>FONDO</h4>
                 <div class="color-container flex-container align-center">
-                    <label for="input-background"></label>
-                    <input type="color" id="input-background" value="#000000">
+                    <label for="background-color-text"></label>
+                    <input type="color" id="background-color-text" value="#000000">
                     <span>#FFFFFF</span>
                 </div>
             </div>
         </div>
         <div class="flex-container">
-            <label for=""></label>
+            <label for="background-checkbox"></label>
             <input type="checkbox" id="background-checkbox">
             <small>Fondo transparente</small>
         </div>
         <div class="panel-settings">
             <!-- Outline buttons-->
             <h4>CONTORNO</h4>
-            <button>Ninguno</button>
-            <button>Claro</button>
-            <button>Oscuro</button>
+            <button id="none-text-outline">Ninguno</button>
+            <button id="light-text-outline">Claro</button>
+            <button id="dark-text-outline">Oscuro</button>
         </div>
         <div class="panel-settings">
             <!-- Spacing -->
             <h4>Espaciado</h4>
-            <label for="space"></label>
-            <input type="number" id="space" min="10" max="50" placeholder="35">
+            <label for="spacing"></label>
+            <input type="number" id="spacing" min="10" max="50" placeholder="35">
         </div>
         <div class="panel-settings">
             <!-- Leading options-->
