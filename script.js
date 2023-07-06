@@ -43,3 +43,13 @@ const changeMode = () => {
         modeButton.innerHTML = `<i class="fa-regular fa-sun"></i>Modo claro`;
     }
 };
+
+/*___________________________MEME IMAGE_______________________*/
+const urlInput = document.getElementById("image-url");
+const memeImage = document.getElementById("meme-img-container");
+
+urlInput.addEventListener("input", () => changeBackground());
+
+const changeBackground = () => {
+    memeImage.style.backgroundImage = `url('${urlInput.value}')`;
+};
