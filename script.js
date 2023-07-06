@@ -25,3 +25,21 @@ const hideTextPanel = () => {
     textPanel.classList.add("hidden");
     imagePanel.classList.remove("hidden");
 };
+
+/*___________________________CHANGE MODE_______________________*/
+//Guardo el elemento body para cambiarle el modo a claro
+const body = document.getElementById("body");
+//change mode event
+modeButton.addEventListener("click", () => changeMode());
+
+//change mode function
+//agrego transición al cambiar el modo
+const changeMode = () => {
+    body.classList.toggle("light-body");
+    body.classList.add("transition");
+    if (body.classList.contains("light-body")) {
+        modeButton.innerHTML = `<i class="fa-solid fa-moon"></i>Modo oscuro`;
+    } else {
+        modeButton.innerHTML = `<i class="fa-regular fa-sun"></i>Modo claro`;
+    }
+};
