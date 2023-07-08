@@ -127,3 +127,26 @@ const restartFilters = () => {
     negativeImage.value = 0;
     memeImage.style.filter = "none";
 };
+
+/*___________________________TEXT PANEL SETTINGS_______________________*/
+
+//top text & bottom text meme
+const topText = document.getElementById("top-text");
+const buttomText = document.getElementById("buttom-text");
+const topTextInput = document.getElementById("top-text-input");
+const bottomTextInput = document.getElementById("bottom-text-input");
+
+topTextInput.addEventListener("input", () => changeTopText());
+
+const changeTopText = () => {
+    let text = topTextInput.value;
+    topText.innerHTML = `${text}`;
+};
+
+bottomTextInput.addEventListener("input", () => changeButtomText());
+
+const changeButtomText = () => {
+    let text = bottomTextInput.value;
+    buttomText.innerHTML = `${text}`;
+};
+console.log(ChangeButtomText);

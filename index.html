@@ -33,12 +33,12 @@
     <!-- MAIN -->
     <main class="align-center flex-container" id="main-container">
         <div class="meme-container">
-            <div class="meme-text-container align-center" id="top-text-input">
-                <h2>TOP TEXT</h2>
+            <div class="meme-text-container align-center">
+                <h2 id="top-text">TOP TEXT</h2>
             </div>
             <div class="meme-img-container" id="meme-img-container"></div>
             <div class="meme-text-container align-center" >
-                <h2 > BUTTOM TEXT</h2>
+                <h2 id="buttom-text" > BUTTOM TEXT</h2>
             </div>
         </div>
         <button class="principal-container-button"><i class="fa-solid fa-download"></i>Descargar Meme</button>
@@ -122,20 +122,20 @@
     <!---------- TEXT PANEL ---------->
     <aside class="text-panel aside hidden" id="text-panel">
         <h3>TEXT</h3>
-        <!-- Top text -->
+        <!-- Top text input-->
         <div class="panel-settings">
             <H4>SUPERIOR</H4>
-            <label for="top-text"></label>
-            <textarea name="" id="top-text" cols="30" rows="5" placeholder="TOP TEXT"></textarea>
+            <label for="top-text-input"></label>
+            <textarea name="" id="top-text-input" cols="30" rows="5" placeholder="TOP TEXT"></textarea>
             <label for="top-checkbox"></label>
             <input type="checkbox" id="top-checkbox">
             <small>Sin texto superior</small>
         </div>
-        <!-- Buttom text -->
+        <!-- Buttom text input -->
         <div class="panel-settings">
             <h4>INFERIOR</h4>
-            <label for="buttom-text"></label>
-            <textarea name="" id="buttom-text" cols="30" rows="5" placeholder="BUTTOM TEXT"></textarea>
+            <label for="bottom-text-input"></label>
+            <textarea name="" id="bottom-text-input" cols="30" rows="5" placeholder="BUTTOM TEXT"></textarea>
             <label for="buttom-checkbox"></label>
             <input type="checkbox" id="buttom-checkbox">
             <small>Sin texto inferior</small>
