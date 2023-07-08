@@ -233,7 +233,7 @@ textarea {
 }
 input[type="range"] {
     width: 100%;
-    accent-color: #9a1fffc0;
+    /*accent-color: #9a1fffc0;*/
     cursor: pointer;
 }
 

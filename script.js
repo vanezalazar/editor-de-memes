@@ -82,12 +82,11 @@ const changeBackgroundBlendMode = () => {
 filtersSelector.addEventListener("change", () => changeBackgroundBlendMode());
 
 //Image filters sliders
-
 const imageBackgroundColor = document.getElementById("background-color-img");
 const imageFilters = document.getElementById("background-filters-options");
 const brightnessImage = document.getElementById("brightness");
-const opacityTmage = document.getElementById("opacity");
-const contrastTmage = document.getElementById("contrast");
+const opacityImage = document.getElementById("opacity");
+const contrastImage = document.getElementById("contrast");
 const blurImage = document.getElementById("blur");
 const grayscale = document.getElementById("grayscale");
 const sepiaImage = document.getElementById("sepia");
@@ -96,12 +95,13 @@ const saturateImage = document.getElementById("saturate");
 const negativeImage = document.getElementById("negative");
 
 const filters = () => {
-    memeImage.style.filter = `brightness(${brightnessImage.value}) opacity(${opacityTmage.value}) blur(${blurImage.value}) contrast(${contrastTmage.value}) grayscale(${grayscale.value}) hue-rotate(${hueImage.value}) sepia(${sepiaImage.value}) saturate(${saturateImage.value}) invert(${negativeImage.value})`;
+    memeImage.style.filter = `brightness(${brightnessImage.value}) opacity(${opacityImage.value}) contrast(${contrastImage.value}%) blur(${blurImage.value}px) grayscale(${grayscale.value}%) sepia(${sepiaImage.value}%) hue-rotate(${hueImage.value}deg) saturate(${saturateImage.value}%) invert(${negativeImage.value})`;
 };
+
 console.log(filters);
 brightnessImage.addEventListener("input", () => filters());
-opacityTmage.addEventListener("input", () => filters());
-contrastTmage.addEventListener("input", () => filters());
+opacityImage.addEventListener("input", () => filters());
+contrastImage.addEventListener("input", () => filters());
 blurImage.addEventListener("input", () => filters());
 grayscale.addEventListener("input", () => filters());
 sepiaImage.addEventListener("input", () => filters());
