@@ -46,7 +46,7 @@ const changeMode = () => {
 
 /*___________________________IMAGE PANEL SETTINGS_______________________*/
 
-//MEME URL IMAGE
+//meme url image
 const urlInput = document.getElementById("image-url");
 const memeImage = document.getElementById("meme-img-container");
 
@@ -78,12 +78,13 @@ console.log(filtersSelector);
 const changeBackgroundBlendMode = () => {
     memeImage.style.backgroundBlendMode = filtersSelector.value;
 };
+console.log(filtersSelector.value);
 
 filtersSelector.addEventListener("change", () => changeBackgroundBlendMode());
 
 //Image filters sliders
-const imageBackgroundColor = document.getElementById("background-color-img");
-const imageFilters = document.getElementById("background-filters-options");
+//const imageBackgroundColor = document.getElementById("background-color-img");
+//const imageFilters = document.getElementById("background-filters-options");
 const brightnessImage = document.getElementById("brightness");
 const opacityImage = document.getElementById("opacity");
 const contrastImage = document.getElementById("contrast");
@@ -108,3 +109,21 @@ sepiaImage.addEventListener("input", () => filters());
 hueImage.addEventListener("input", () => filters());
 saturateImage.addEventListener("input", () => filters());
 negativeImage.addEventListener("input", () => filters());
+console.log(negativeImage.value);
+
+//restart button
+const restartButton = document.getElementById("restart-btn");
+restartButton.addEventListener("click", () => restartFilters());
+
+const restartFilters = () => {
+    brightnessImage.value = 1;
+    opacityImage.value = 1;
+    contrastImage.value = 100;
+    blurImage.value = 0;
+    grayscale.value = 0;
+    sepiaImage.value = 0;
+    hueImage.value = 0;
+    saturateImage.value = 100;
+    negativeImage.value = 0;
+    memeImage.style.filter = "none";
+};
