@@ -44,7 +44,9 @@ const changeMode = () => {
     }
 };
 
-/*___________________________MEME IMAGE_______________________*/
+/*___________________________IMAGE PANEL SETTINGS_______________________*/
+
+//MEME URL IMAGE
 const urlInput = document.getElementById("image-url");
 const memeImage = document.getElementById("meme-img-container");
 
@@ -53,3 +55,56 @@ urlInput.addEventListener("input", () => changeBackground());
 const changeBackground = () => {
     memeImage.style.backgroundImage = `url('${urlInput.value}')`;
 };
+
+//change image background color & color name
+const backgroundColorImage = document.getElementById("background-color-img");
+console.log(backgroundColorImage);
+const colorName = document.getElementById("color-name");
+console.log(colorName);
+
+backgroundColorImage.addEventListener("input", () => changeBackgroundColor());
+
+const changeBackgroundColor = () => {
+    let color = backgroundColorImage.value;
+    colorName.innerHTML = `${color}`;
+    memeImage.style.backgroundColor = backgroundColorImage.value;
+    console.log(backgroundColorImage.value);
+};
+
+//select background blend mode
+const filtersSelector = document.getElementById("background-filters-options");
+console.log(filtersSelector);
+
+const changeBackgroundBlendMode = () => {
+    memeImage.style.backgroundBlendMode = filtersSelector.value;
+};
+
+filtersSelector.addEventListener("change", () => changeBackgroundBlendMode());
+
+//Image filters sliders
+
+const imageBackgroundColor = document.getElementById("background-color-img");
+const imageFilters = document.getElementById("background-filters-options");
+const brightnessImage = document.getElementById("brightness");
+const opacityTmage = document.getElementById("opacity");
+const contrastTmage = document.getElementById("contrast");
+const blurImage = document.getElementById("blur");
+const grayscale = document.getElementById("grayscale");
+const sepiaImage = document.getElementById("sepia");
+const hueImage = document.getElementById("hue");
+const saturateImage = document.getElementById("saturate");
+const negativeImage = document.getElementById("negative");
+
+const filters = () => {
+    memeImage.style.filter = `brightness(${brightnessImage.value}) opacity(${opacityTmage.value}) blur(${blurImage.value}) contrast(${contrastTmage.value}) grayscale(${grayscale.value}) hue-rotate(${hueImage.value}) sepia(${sepiaImage.value}) saturate(${saturateImage.value}) invert(${negativeImage.value})`;
+};
+console.log(filters);
+brightnessImage.addEventListener("input", () => filters());
+opacityTmage.addEventListener("input", () => filters());
+contrastTmage.addEventListener("input", () => filters());
+blurImage.addEventListener("input", () => filters());
+grayscale.addEventListener("input", () => filters());
+sepiaImage.addEventListener("input", () => filters());
+hueImage.addEventListener("input", () => filters());
+saturateImage.addEventListener("input", () => filters());
+negativeImage.addEventListener("input", () => filters());
