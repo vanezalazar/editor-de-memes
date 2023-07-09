@@ -135,19 +135,18 @@ const bottomText = document.getElementById("bottom-text");
 const topTextInput = document.getElementById("top-text-input");
 const bottomTextInput = document.getElementById("bottom-text-input");
 
-topTextInput.addEventListener("input", () => changeTopText());
-
 const changeTopText = () => {
     let text = topTextInput.value;
     topText.innerHTML = `${text}`;
 };
 
-bottomTextInput.addEventListener("input", () => changeBottomText());
+topTextInput.addEventListener("input", () => changeTopText());
 
 const changeBottomText = () => {
     let text = bottomTextInput.value;
     bottomText.innerHTML = `${text}`;
 };
+bottomTextInput.addEventListener("input", () => changeBottomText());
 console.log(changeBottomText);
 
 //hide top & bottom text
@@ -172,3 +171,22 @@ const hideBottomText = () => {
         bottomText.classList.remove("hidden");
     }
 };
+//select font family
+const fontSelect = document.getElementById("fonts");
+console.log(fontSelect.value);
+const changeFontFamily = () => {
+    topText.style.fontFamily = `${fontSelect.value}`;
+    bottomText.style.fontFamily = `${fontSelect.value}`;
+};
+fontSelect.addEventListener("change", () => changeFontFamily());
+
+//change font size
+const inputFontSize = document.getElementById("input-font-size");
+console.log(inputFontSize.value);
+
+const changeFontSize = () => {
+    topText.style.fontSize = `${inputFontSize.value}px`;
+    bottomText.style.fontSize = `${inputFontSize.value}px`;
+};
+
+inputFontSize.addEventListener("input", () => changeFontSize());
