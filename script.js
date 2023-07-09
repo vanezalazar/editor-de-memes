@@ -190,3 +190,29 @@ const changeFontSize = () => {
 };
 
 inputFontSize.addEventListener("input", () => changeFontSize());
+
+// Text alignment buttons
+const leftButton = document.getElementById("left-btn");
+console.log(leftButton);
+const centerButton = document.getElementById("center-btn");
+console.log(centerButton);
+const rightButton = document.getElementById("right-btn");
+console.log(rightButton);
+
+const textAlignLeft = () => {
+    topText.style.textAlign = "left";
+    bottomText.style.textAlign = "left";
+};
+
+leftButton.addEventListener("click", () => textAlignLeft());
+const textAlignCenter = () => {
+    topText.style.textAlign = "center";
+    bottomText.style.textAlign = "center";
+};
+centerButton.addEventListener("click", () => textAlignCenter());
+
+const textAlignRight = () => {
+    topText.style.textAlign = "right";
+    bottomText.style.textAlign = "right";
+};
+rightButton.addEventListener("click", () => textAlignRight());
