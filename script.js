@@ -129,10 +129,9 @@ const restartFilters = () => {
 };
 
 /*___________________________TEXT PANEL SETTINGS_______________________*/
-
 //top text & bottom text meme
 const topText = document.getElementById("top-text");
-const buttomText = document.getElementById("buttom-text");
+const bottomText = document.getElementById("bottom-text");
 const topTextInput = document.getElementById("top-text-input");
 const bottomTextInput = document.getElementById("bottom-text-input");
 
@@ -143,10 +142,33 @@ const changeTopText = () => {
     topText.innerHTML = `${text}`;
 };
 
-bottomTextInput.addEventListener("input", () => changeButtomText());
+bottomTextInput.addEventListener("input", () => changeBottomText());
 
-const changeButtomText = () => {
+const changeBottomText = () => {
     let text = bottomTextInput.value;
-    buttomText.innerHTML = `${text}`;
+    bottomText.innerHTML = `${text}`;
 };
-console.log(ChangeButtomText);
+console.log(changeBottomText);
+
+//hide top & bottom text
+const topCheckbox = document.getElementById("top-text-checkbox");
+console.log(topCheckbox);
+const bottomCheckbox = document.getElementById("bottom-text-checkbox");
+console.log(bottomCheckbox);
+topCheckbox.addEventListener("change", () => hideTopText());
+bottomCheckbox.addEventListener("change", () => hideBottomText());
+
+const hideTopText = () => {
+    if (topCheckbox.checked) {
+        topText.classList.add("hidden");
+    } else {
+        topText.classList.remove("hidden");
+    }
+};
+const hideBottomText = () => {
+    if (bottomCheckbox.checked) {
+        bottomText.classList.add("hidden");
+    } else {
+        bottomText.classList.remove("hidden");
+    }
+};

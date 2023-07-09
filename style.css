@@ -129,6 +129,7 @@ main {
 .meme-container {
     width: 40%;
     height: 400px;
+    height: 60%;
 }
 
 .meme-text-container {
@@ -136,9 +137,13 @@ main {
     font-family: "Staatliches", cursive;
     font-size: 20px;
     color: black;
-    padding: 8px;
     font-weight: bold;
     text-align: center;
+    /*height: 20%;*/
+}
+h2 {
+    text-transform: uppercase;
+    padding: 8px;
 }
 
 .meme-img-container {

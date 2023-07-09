@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme generator</title>
     <script src="https://kit.fontawesome.com/17e83f601c.js" crossorigin="anonymous"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+></script>
     <link rel="shortcut icon" href="edit.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,16 +44,16 @@
     </header>
     <!-- MAIN -->
     <main class="align-center flex-container" id="main-container">
-        <div class="meme-container">
+        <div class="meme-container" id="meme-container">
             <div class="meme-text-container align-center">
                 <h2 id="top-text">TOP TEXT</h2>
             </div>
             <div class="meme-img-container" id="meme-img-container"></div>
             <div class="meme-text-container align-center" >
-                <h2 id="buttom-text" > BUTTOM TEXT</h2>
+                <h2 id="bottom-text" > BOTTOM TEXT</h2>
             </div>
         </div>
-        <button class="principal-container-button"><i class="fa-solid fa-download"></i>Descargar Meme</button>
+        <button class="principal-container-button" id="download-btn" ><i class="fa-solid fa-download"></i>Descargar Meme</button>
     </main>
     <aside class="image-panel aside" id="image-panel">
         <!---------- IMAGE PANEL ----------->
@@ -127,17 +139,17 @@
             <H4>SUPERIOR</H4>
             <label for="top-text-input"></label>
             <textarea name="" id="top-text-input" cols="30" rows="5" placeholder="TOP TEXT"></textarea>
-            <label for="top-checkbox"></label>
-            <input type="checkbox" id="top-checkbox">
+            <label for="top-text-checkbox"></label>
+            <input type="checkbox" id="top-text-checkbox">
             <small>Sin texto superior</small>
         </div>
         <!-- Buttom text input -->
         <div class="panel-settings">
             <h4>INFERIOR</h4>
             <label for="bottom-text-input"></label>
-            <textarea name="" id="bottom-text-input" cols="30" rows="5" placeholder="BUTTOM TEXT"></textarea>
-            <label for="buttom-checkbox"></label>
-            <input type="checkbox" id="buttom-checkbox">
+            <textarea name="" id="bottom-text-input" cols="30" rows="5" placeholder="BOTTOM TEXT"></textarea>
+            <label for="bottom-text-checkbox"></label>
+            <input type="checkbox" id="bottom-text-checkbox">
             <small>Sin texto inferior</small>
         </div>
         <div class="panel-settings">
