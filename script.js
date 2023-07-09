@@ -216,3 +216,48 @@ const textAlignRight = () => {
     bottomText.style.textAlign = "right";
 };
 rightButton.addEventListener("click", () => textAlignRight());
+
+//change text color
+const textColorInput = document.getElementById("text-color-input");
+const textColorName = document.getElementById("text-color-name");
+
+const changeTextColor = () => {
+    let color = textColorInput.value;
+    textColorName.innerHTML = `${color}`;
+    topText.style.color = `${textColorInput.value}`;
+    bottomText.style.color = `${textColorInput.value}`;
+};
+
+textColorInput.addEventListener("input", () => changeTextColor());
+
+//change text background color
+const topTextBackground = document.getElementById("top-text-container");
+const bottomTextBackground = document.getElementById("bottom-text-container");
+console.log(bottomTextBackground);
+const textBackgroundInput = document.getElementById("text-background-color");
+const textBackgroundName = document.getElementById("text-background-name");
+
+const changeTextBackground = () => {
+    let color = textBackgroundInput.value;
+    textBackgroundName.innerHTML = `${color}`;
+    topTextBackground.style.backgroundColor = `${textBackgroundInput.value}`;
+    bottomTextBackground.style.backgroundColor = `${textBackgroundInput.value}`;
+};
+textBackgroundInput.addEventListener("input", () => changeTextBackground());
+
+// text background transparent checkbox
+
+const backgroundCheckbox = document.getElementById("background-checkbox");
+console.log(backgroundCheckbox);
+
+const hideTextBackground = () => {
+    if (backgroundCheckbox.checked) {
+        topTextBackground.style.backgroundColor = "transparent";
+        bottomTextBackground.style.backgroundColor = "transparent";
+    } else {
+        topTextBackground.style.backgroundColor = `${inputBackgroundText.value}`;
+        bottomTextBackground.style.backgroundColor = `${inputBackgroundText.value}`;
+    }
+};
+
+backgroundCheckbox.addEventListener("change", () => hideTextBackground());

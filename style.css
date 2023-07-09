@@ -53,6 +53,8 @@ body {
 /*_________________________HEADER______________________*/
 header {
     background-color: #191e2b;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: transparent;
     padding: 5px;
     display: flex;
     justify-content: center;
@@ -88,6 +90,7 @@ h1 {
 .hidden {
     display: none;
 }
+
 .header-buttons-container {
     margin-top: 15px;
 }

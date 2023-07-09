@@ -45,11 +45,11 @@
     <!-- MAIN -->
     <main class="align-center flex-container" id="main-container">
         <div class="meme-container" id="meme-container">
-            <div class="meme-text-container align-center">
+            <div class="meme-text-container align-center" id="top-text-container" >
                 <h2 id="top-text">TOP TEXT</h2>
             </div>
             <div class="meme-img-container" id="meme-img-container"></div>
-            <div class="meme-text-container align-center" >
+            <div class="meme-text-container align-center" id="bottom-text-container">
                 <h2 id="bottom-text" > BOTTOM TEXT</h2>
             </div>
         </div>
@@ -167,7 +167,7 @@
                 <option value="verdana">Verdana</option>
                 <option value="times new roman">Times New Roman</option>
             </select>
-            <!-- Input font size -->
+            <!--  font size input -->
             <div class="flex-container">
                 <div>
                     <label for="input-font-size"></label>
@@ -183,24 +183,25 @@
         </div>
         <div class="flex-container space">
             <div>
-                <!-- Color -->
+                <!-- Text color input-->
                 <h4>COLOR</h4>
                 <div class="color-container flex-container align-center">
-                    <label for="color-text"></label>
-                    <input type="color" class="color-picker" id="color-text">
-                    <span>#FFFFFF</span>
+                    <label for="color-text-input"></label>
+                    <input type="color" class="color-picker" id="text-color-input">
+                    <span id="text-color-name">#FFFFFF</span>
                 </div>
             </div>
             <div>
-                <!-- Background -->
+                <!-- Background color text input -->
                 <h4>FONDO</h4>
                 <div class="color-container flex-container align-center">
-                    <label for="background-color-text"></label>
-                    <input type="color" class="color-picker" id="background-color-text" value="#000000">
-                    <span>#FFFFFF</span>
+                    <label for="text-background-color"></label>
+                    <input type="color" class="color-picker" id="text-background-color" value="#000000">
+                    <span id="text-background-name">#FFFFFF</span>
                 </div>
             </div>
         </div>
+        <!-- background text meme container checkbox -->
         <div class="flex-container">
             <label for="background-checkbox"></label>
             <input type="checkbox" id="background-checkbox">
