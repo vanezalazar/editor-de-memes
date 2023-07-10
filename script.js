@@ -296,3 +296,11 @@ const changeTextSpacing = () => {
     bottomTextBackground.style.padding = `${textSpacingInput.value}px`;
 };
 textSpacingInput.addEventListener("input", () => changeTextSpacing());
+
+// Select text line height
+const textLeadingInput = document.getElementById("leading");
+const changeTextLeading = () => {
+    topText.style.lineHeight = `${textLeadingInput.value}px`;
+    bottomText.style.lineHeight = `${textLeadingInput.value}px`;
+};
+textLeadingInput.addEventListener("change", () => changeTextLeading());
