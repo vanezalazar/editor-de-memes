@@ -255,9 +255,34 @@ const hideTextBackground = () => {
         topTextBackground.style.backgroundColor = "transparent";
         bottomTextBackground.style.backgroundColor = "transparent";
     } else {
-        topTextBackground.style.backgroundColor = `${inputBackgroundText.value}`;
-        bottomTextBackground.style.backgroundColor = `${inputBackgroundText.value}`;
+        topTextBackground.style.backgroundColor = `${textBackgroundInput.value}`;
+        bottomTextBackground.style.backgroundColor = `${textBackgroundInput.value}`;
     }
 };
 
 backgroundCheckbox.addEventListener("change", () => hideTextBackground());
+
+//Text outline buttons
+const outlineButtonNone = document.getElementById("text-outline-none");
+const outlineButtonDark = document.getElementById("text-outline-dark");
+const outlineButtonlight = document.getElementById("text-outline-light");
+
+const hideTextOutline = () => {
+    topText.classList.remove("light-outline");
+    bottomText.classList.remove("light-outline");
+    topText.classList.remove("dark-outline");
+    bottomText.classList.remove("dark-outline");
+};
+outlineButtonNone.addEventListener("click", () => hideTextOutline());
+
+const lightTextOutline = () => {
+    topText.classList.add("light-outline");
+    bottomText.classList.add("light-outline");
+};
+
+outlineButtonlight.addEventListener("click", () => lightTextOutline());
+const darkTextOutline = () => {
+    topText.classList.add("dark-outline");
+    bottomText.classList.add("dark-outline");
+};
+outlineButtonDark.addEventListener("click", () => darkTextOutline());
