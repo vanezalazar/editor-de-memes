@@ -58,28 +58,20 @@ const changeBackground = () => {
 
 //change image background color & color name
 const backgroundColorImage = document.getElementById("background-color-img");
-console.log(backgroundColorImage);
 const colorName = document.getElementById("color-name");
-console.log(colorName);
-
 backgroundColorImage.addEventListener("input", () => changeBackgroundColor());
 
 const changeBackgroundColor = () => {
     let color = backgroundColorImage.value;
     colorName.innerHTML = `${color}`;
     memeImage.style.backgroundColor = backgroundColorImage.value;
-    console.log(backgroundColorImage.value);
 };
 
 //select background blend mode
 const filtersSelector = document.getElementById("background-filters-options");
-console.log(filtersSelector);
-
 const changeBackgroundBlendMode = () => {
     memeImage.style.backgroundBlendMode = filtersSelector.value;
 };
-console.log(filtersSelector.value);
-
 filtersSelector.addEventListener("change", () => changeBackgroundBlendMode());
 
 //Image filters sliders
@@ -99,7 +91,6 @@ const filters = () => {
     memeImage.style.filter = `brightness(${brightnessImage.value}) opacity(${opacityImage.value}) contrast(${contrastImage.value}%) blur(${blurImage.value}px) grayscale(${grayscale.value}%) sepia(${sepiaImage.value}%) hue-rotate(${hueImage.value}deg) saturate(${saturateImage.value}%) invert(${negativeImage.value})`;
 };
 
-console.log(filters);
 brightnessImage.addEventListener("input", () => filters());
 opacityImage.addEventListener("input", () => filters());
 contrastImage.addEventListener("input", () => filters());
@@ -109,7 +100,6 @@ sepiaImage.addEventListener("input", () => filters());
 hueImage.addEventListener("input", () => filters());
 saturateImage.addEventListener("input", () => filters());
 negativeImage.addEventListener("input", () => filters());
-console.log(negativeImage.value);
 
 //restart button
 const restartButton = document.getElementById("restart-btn");
@@ -147,13 +137,10 @@ const changeBottomText = () => {
     bottomText.innerHTML = `${text}`;
 };
 bottomTextInput.addEventListener("input", () => changeBottomText());
-console.log(changeBottomText);
 
 //hide top & bottom text
 const topCheckbox = document.getElementById("top-text-checkbox");
-console.log(topCheckbox);
 const bottomCheckbox = document.getElementById("bottom-text-checkbox");
-console.log(bottomCheckbox);
 topCheckbox.addEventListener("change", () => hideTopText());
 bottomCheckbox.addEventListener("change", () => hideBottomText());
 
@@ -173,7 +160,6 @@ const hideBottomText = () => {
 };
 //select font family
 const fontSelect = document.getElementById("fonts");
-console.log(fontSelect.value);
 const changeFontFamily = () => {
     topText.style.fontFamily = `${fontSelect.value}`;
     bottomText.style.fontFamily = `${fontSelect.value}`;
@@ -182,22 +168,17 @@ fontSelect.addEventListener("change", () => changeFontFamily());
 
 //change font size
 const inputFontSize = document.getElementById("input-font-size");
-console.log(inputFontSize.value);
 
 const changeFontSize = () => {
     topText.style.fontSize = `${inputFontSize.value}px`;
     bottomText.style.fontSize = `${inputFontSize.value}px`;
 };
-
 inputFontSize.addEventListener("input", () => changeFontSize());
 
 // Text alignment buttons
 const leftButton = document.getElementById("left-btn");
-console.log(leftButton);
 const centerButton = document.getElementById("center-btn");
-console.log(centerButton);
 const rightButton = document.getElementById("right-btn");
-console.log(rightButton);
 
 const textAlignLeft = () => {
     topText.style.textAlign = "left";
@@ -233,7 +214,6 @@ textColorInput.addEventListener("input", () => changeTextColor());
 //change text background color
 const topTextBackground = document.getElementById("top-text-container");
 const bottomTextBackground = document.getElementById("bottom-text-container");
-console.log(bottomTextBackground);
 const textBackgroundInput = document.getElementById("text-background-color");
 const textBackgroundName = document.getElementById("text-background-name");
 
@@ -248,7 +228,6 @@ textBackgroundInput.addEventListener("input", () => changeTextBackground());
 //Text background transparent checkbox
 
 const backgroundCheckbox = document.getElementById("background-checkbox");
-console.log(backgroundCheckbox);
 
 const hideTextBackground = () => {
     if (backgroundCheckbox.checked) {
@@ -289,7 +268,6 @@ outlineButtonDark.addEventListener("click", () => darkTextOutline());
 
 //Text spacing input
 const textSpacingInput = document.getElementById("spacing");
-console.log(textSpacingInput.value);
 
 const changeTextSpacing = () => {
     topTextBackground.style.padding = `${textSpacingInput.value}px`;
@@ -311,7 +289,6 @@ const downloadButton = document.getElementById("download-btn");
 const meme = document.getElementById("meme-container");
 
 downloadButton.addEventListener("click", () => downloadMeme());
-
 const downloadMeme = () => {
     domtoimage.toBlob(meme).then(function (blob) {
         window.saveAs(blob, "my-meme.png");
