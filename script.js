@@ -286,3 +286,13 @@ const darkTextOutline = () => {
     bottomText.classList.add("dark-outline");
 };
 outlineButtonDark.addEventListener("click", () => darkTextOutline());
+
+//Text spacing input
+const textSpacingInput = document.getElementById("spacing");
+console.log(textSpacingInput.value);
+
+const changeTextSpacing = () => {
+    topTextBackground.style.padding = `${textSpacingInput.value}px`;
+    bottomTextBackground.style.padding = `${textSpacingInput.value}px`;
+};
+textSpacingInput.addEventListener("input", () => changeTextSpacing());
