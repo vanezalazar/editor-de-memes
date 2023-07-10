@@ -245,7 +245,7 @@ const changeTextBackground = () => {
 };
 textBackgroundInput.addEventListener("input", () => changeTextBackground());
 
-// text background transparent checkbox
+//Text background transparent checkbox
 
 const backgroundCheckbox = document.getElementById("background-checkbox");
 console.log(backgroundCheckbox);
@@ -304,3 +304,22 @@ const changeTextLeading = () => {
     bottomText.style.lineHeight = `${textLeadingInput.value}px`;
 };
 textLeadingInput.addEventListener("change", () => changeTextLeading());
+
+/*___________________________DOWNLOAD MEME BUTTON _______________________*/
+
+const downloadButton = document.getElementById("download-btn");
+const meme = document.getElementById("meme-container");
+
+downloadButton.addEventListener("click", () => downloadMeme());
+
+const downloadMeme = () => {
+    domtoimage.toBlob(meme).then(function (blob) {
+        window.saveAs(blob, "my-meme.png");
+    });
+};
+const transparentCheckbox = document.getElementById("transparentBackgroud");
+const transparentBg = () => {
+    topText.classList.toggle("transparent-top");
+    bottomText.classList.toggle("transparent-bottom");
+};
+transparentCheckbox.addEventListener("click", transparentBg);
