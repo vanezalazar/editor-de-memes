@@ -75,8 +75,6 @@ const changeBackgroundBlendMode = () => {
 filtersSelector.addEventListener("change", () => changeBackgroundBlendMode());
 
 //Image filters sliders
-//const imageBackgroundColor = document.getElementById("background-color-img");
-//const imageFilters = document.getElementById("background-filters-options");
 const brightnessImage = document.getElementById("brightness");
 const opacityImage = document.getElementById("opacity");
 const contrastImage = document.getElementById("contrast");
@@ -294,9 +292,3 @@ const downloadMeme = () => {
         window.saveAs(blob, "my-meme.png");
     });
 };
-const transparentCheckbox = document.getElementById("transparentBackgroud");
-const transparentBg = () => {
-    topText.classList.toggle("transparent-top");
-    bottomText.classList.toggle("transparent-bottom");
-};
-transparentCheckbox.addEventListener("click", transparentBg);

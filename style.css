@@ -66,6 +66,7 @@ header {
 .logo {
     width: 80px;
     height: 80px;
+    display: inline-block;
 }
 
 h1 {
@@ -174,6 +175,7 @@ h2 {
     align-self: center;
 }
 /*_________________________ASIDE______________________*/
+
 aside {
     display: flex;
     flex-direction: column;
@@ -270,7 +272,33 @@ input[type="range"] {
     .meme-text-container {
         padding: 5px;
     }
+
+    .aside {
+        width: 100%;
+        justify-content: center;
+    }
+    .meme-container {
+        width: 100%;
+    }
+    main {
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+    .header-buttons-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: center;
+    }
+    .logo-title-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        align-self: center;
+    }
 }
