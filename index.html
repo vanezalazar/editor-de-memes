@@ -59,11 +59,12 @@
                 <h2 id="bottom-text" > BOTTOM TEXT</h2>
             </div>
         </div>
-        <button class="principal-container-button" id="download-btn" ><i class="fa-solid fa-download"></i>Descargar Meme</button>
+        <button class="download-btn" id="download-btn" ><i class="fa-solid fa-download"></i>Descargar Meme</button>
     </main>
+    <!---------- IMAGE PANEL ----------->
     <aside class="image-panel aside" id="image-panel">
-        <!---------- IMAGE PANEL ----------->
-        <h3>IMAGEN</h3>
+        <button id="close-btn" class="close-btn hidden"><i class="fa-solid fa-circle-xmark"></i></button>
+        <h3 class="panel-title">IMAGEN</h3>
         <!-- image URL -->
         <div class="panel-settings">
             <h4>URL</h4>
@@ -139,7 +140,8 @@
     </aside>
     <!---------- TEXT PANEL ---------->
     <aside class="text-panel aside hidden" id="text-panel">
-        <h3>TEXT</h3>
+        <button id="close-btn-text-panel" class="close-btn hidden"><i class="fa-solid fa-circle-xmark"></i></button>
+        <h3 class="panel-title">TEXT</h3>
         <!-- Top text input-->
         <div class="panel-settings">
             <H4>SUPERIOR</H4>
