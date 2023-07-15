@@ -10,11 +10,11 @@ const imagePanel = document.getElementById("image-panel");
 const textPanel = document.getElementById("text-panel");
 
 //Capturo el evento y lo paso a la funcion
-//Hide aside events:
+//------------Hide aside events------------
 imageButton.addEventListener("click", () => hideTextPanel());
 textButton.addEventListener("click", () => hideImagePanel());
 
-//Hide aside functions:
+//------------Hide aside functions------------
 const hideImagePanel = () => {
     imagePanel.classList.add("hidden");
     textPanel.classList.remove("hidden");
@@ -25,7 +25,7 @@ const hideTextPanel = () => {
     imagePanel.classList.remove("hidden");
 };
 
-// Hide asides with close asides buttons
+// ------------Hide asides with close asides buttons------------
 const closeAsideBtn = document.getElementById("close-btn");
 const closePanelTextBtn = document.getElementById("close-btn-text-panel");
 
@@ -42,7 +42,7 @@ const body = document.getElementById("body");
 //Change mode event
 modeButton.addEventListener("click", () => changeMode());
 
-//Change mode function
+//------------Change mode function------------
 //Agrego transición al cambiar el modo
 const changeMode = () => {
     body.classList.toggle("light-body");
@@ -55,7 +55,6 @@ const changeMode = () => {
 };
 
 /*___________________________IMAGE PANEL SETTINGS_______________________*/
-
 //Meme URL image
 const urlInput = document.getElementById("image-url");
 const memeImage = document.getElementById("meme-img-container");
@@ -66,7 +65,7 @@ const changeBackground = () => {
     memeImage.style.backgroundImage = `url('${urlInput.value}')`;
 };
 
-//Change image background color & color name
+//------------Change image background color & color name------------
 const backgroundColorImage = document.getElementById("background-color-img");
 const colorName = document.getElementById("color-name");
 backgroundColorImage.addEventListener("input", () => changeBackgroundColor());
@@ -77,7 +76,7 @@ const changeBackgroundColor = () => {
     memeImage.style.backgroundColor = backgroundColorImage.value;
 };
 
-//Select background blend mode
+//------------Select background blend mode------------
 const filtersSelector = document.getElementById("background-filters-options");
 const changeBackgroundBlendMode = () => {
     memeImage.style.backgroundBlendMode = filtersSelector.value;
@@ -109,7 +108,7 @@ hueImage.addEventListener("input", () => filters());
 saturateImage.addEventListener("input", () => filters());
 negativeImage.addEventListener("input", () => filters());
 
-//Restart filters button
+//------------Restart filters button------------
 const restartButton = document.getElementById("restart-btn");
 restartButton.addEventListener("click", () => restartFilters());
 
@@ -127,7 +126,7 @@ const restartFilters = () => {
 };
 
 /*___________________________TEXT PANEL SETTINGS_______________________*/
-//Top text & bottom text meme
+//------------Top text & bottom text meme------------
 const topText = document.getElementById("top-text");
 const bottomText = document.getElementById("bottom-text");
 const topTextInput = document.getElementById("top-text-input");
@@ -146,7 +145,7 @@ const changeBottomText = () => {
 };
 bottomTextInput.addEventListener("input", () => changeBottomText());
 
-//Hide top & bottom text
+//------------Hide top & bottom text------------
 const topCheckbox = document.getElementById("top-text-checkbox");
 const bottomCheckbox = document.getElementById("bottom-text-checkbox");
 topCheckbox.addEventListener("change", () => hideTopText());
@@ -166,7 +165,7 @@ const hideBottomText = () => {
         bottomText.classList.remove("hidden");
     }
 };
-//Select font family
+//------------Select font family------------
 const fontSelect = document.getElementById("fonts");
 const changeFontFamily = () => {
     topText.style.fontFamily = `${fontSelect.value}`;
@@ -174,7 +173,7 @@ const changeFontFamily = () => {
 };
 fontSelect.addEventListener("change", () => changeFontFamily());
 
-//Change font size
+//------------Change font size------------
 const inputFontSize = document.getElementById("input-font-size");
 
 const changeFontSize = () => {
@@ -183,7 +182,7 @@ const changeFontSize = () => {
 };
 inputFontSize.addEventListener("input", () => changeFontSize());
 
-// Text alignment buttons
+// ------------Text alignment buttons------------
 const leftButton = document.getElementById("left-btn");
 const centerButton = document.getElementById("center-btn");
 const rightButton = document.getElementById("right-btn");
@@ -206,7 +205,7 @@ const textAlignRight = () => {
 };
 rightButton.addEventListener("click", () => textAlignRight());
 
-//Change text color
+//------------Change text color------------
 const textColorInput = document.getElementById("text-color-input");
 const textColorName = document.getElementById("text-color-name");
 
@@ -233,7 +232,7 @@ const changeTextBackground = () => {
 };
 textBackgroundInput.addEventListener("input", () => changeTextBackground());
 
-//Text background transparent checkbox
+//------------Text background transparent checkbox------------
 const backgroundCheckbox = document.getElementById("background-checkbox");
 
 const hideTextBackground = () => {
@@ -248,7 +247,7 @@ const hideTextBackground = () => {
 
 backgroundCheckbox.addEventListener("change", () => hideTextBackground());
 
-//Text outline buttons
+//------------Text outline buttons------------
 const outlineButtonNone = document.getElementById("text-outline-none");
 const outlineButtonDark = document.getElementById("text-outline-dark");
 const outlineButtonlight = document.getElementById("text-outline-light");
@@ -273,7 +272,7 @@ const darkTextOutline = () => {
 };
 outlineButtonDark.addEventListener("click", () => darkTextOutline());
 
-//Text spacing input
+//------------Text spacing input------------
 const textSpacingInput = document.getElementById("spacing");
 
 const changeTextSpacing = () => {
@@ -282,7 +281,7 @@ const changeTextSpacing = () => {
 };
 textSpacingInput.addEventListener("input", () => changeTextSpacing());
 
-// Select text line height
+//------------ Select text line height------------
 const textLeadingInput = document.getElementById("leading");
 const changeTextLeading = () => {
     topText.style.lineHeight = `${textLeadingInput.value}px`;
@@ -291,7 +290,6 @@ const changeTextLeading = () => {
 textLeadingInput.addEventListener("change", () => changeTextLeading());
 
 /*___________________________DOWNLOAD MEME BUTTON _______________________*/
-
 const downloadButton = document.getElementById("download-btn");
 const meme = document.getElementById("meme-container");
 

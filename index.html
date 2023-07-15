@@ -6,37 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme generator</title>
     <script src="https://kit.fontawesome.com/17e83f601c.js" crossorigin="anonymous"></script>
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
-    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-></script>
-<script
-    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
-    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="shortcut icon" href="edit.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
     <meta property="og:title" content="Meme Generator- Crea tus propios memes">
-    <meta property="og:description" content="¡Diviértete creando tus propios memes!Descargalos y comparte tus memes con tus amigos">
+    <meta property="og:description"
+        content="¡Diviértete creando tus propios memes!Descargalos y comparte tus memes con tus amigos">
     <meta property="og:url" content=" https://vanezalazar.github.io/editor-de-memes/">
     <meta property="og:image" content="">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Meme Generator">
-    </head>
+</head>
 
 <body id="body">
     <!-- HEADER -->
-    <header id="header" >
+    <header id="header">
         <div class="flex-container center logo-title-container">
             <img class="logo" src="images/meme2.png" alt="meme dog">
             <h1>Generador de memes</h1>
@@ -44,22 +40,22 @@
         <div class="header-buttons-container">
             <button id="image-panel-btn"><i class="fa-sharp fa-regular fa-file-image"></i>Imagen</button>
             <button id="text-panel-btn"><i class="fa-solid fa-font"></i>Texto</button>
-            <button id="dark-mode-btn" class="hidden"> <!--<i class="fa-solid fa-moon"></i>Modo oscuro --></button>
-            <button id="mode-btn"><i class="fa-regular fa-sun"></i>Modo claro</button> 
+            <!-- <button id="dark-mode-btn" class="hidden"> <i class="fa-solid fa-moon"></i>Modo oscuro</button> -->
+            <button id="mode-btn"><i class="fa-regular fa-sun"></i>Modo claro</button>
         </div>
     </header>
     <!-- MAIN -->
     <main class="align-center flex-container" id="main-container">
         <div class="meme-container" id="meme-container">
-            <div class="meme-text-container align-center" id="top-text-container" >
+            <div class="meme-text-container align-center" id="top-text-container">
                 <h2 id="top-text">TOP TEXT</h2>
             </div>
             <div class="meme-img-container" id="meme-img-container"></div>
             <div class="meme-text-container align-center" id="bottom-text-container">
-                <h2 id="bottom-text" > BOTTOM TEXT</h2>
+                <h2 id="bottom-text"> BOTTOM TEXT</h2>
             </div>
         </div>
-        <button class="download-btn" id="download-btn" ><i class="fa-solid fa-download"></i>Descargar Meme</button>
+        <button class="download-btn" id="download-btn"><i class="fa-solid fa-download"></i>Descargar Meme</button>
     </main>
     <!---------- IMAGE PANEL ----------->
     <aside class="image-panel aside" id="image-panel">
@@ -79,13 +75,13 @@
                 <div class="color-container flex-container align-center">
                     <label for="background-color"></label>
                     <input class="color-picker" type="color" id="background-color-img">
-                    <span id="color-name" >#FFFFFF</span>
+                    <span id="color-name">#FFFFFF</span>
                 </div>
                 <!-- Background options -->
                 <div class="panel-settings select-container">
                     <label for="background-filters-options"></label>
-                    <select name="" id="background-filters-options">
-                        <option value="none">Ninguno</option>
+                    <select class="selector" name="" id="background-filters-options">
+                        <option value="unset">Ninguno</option>
                         <option value="lighten">Aclarar</option>
                         <option value="darken">Oscurecer</option>
                         <option value="difference">Diferencia</option>
@@ -147,24 +143,28 @@
             <H4>SUPERIOR</H4>
             <label for="top-text-input"></label>
             <textarea name="" id="top-text-input" cols="30" rows="5" placeholder="TOP TEXT"></textarea>
-            <label for="top-text-checkbox"></label>
-            <input type="checkbox" id="top-text-checkbox">
-            <small>Sin texto superior</small>
+            <!-- hide top text checkbox -->
+            <label for="top-text-checkbox">
+                <input type="checkbox" id="top-text-checkbox">
+                Sin texto superior
+            </label>
         </div>
         <!-- Buttom text input -->
         <div class="panel-settings">
             <h4>INFERIOR</h4>
             <label for="bottom-text-input"></label>
             <textarea name="" id="bottom-text-input" cols="30" rows="5" placeholder="BOTTOM TEXT"></textarea>
-            <label for="bottom-text-checkbox"></label>
-            <input type="checkbox" id="bottom-text-checkbox">
-            <small>Sin texto inferior</small>
+            <!-- hide bottom text checkbox -->
+            <label for="bottom-text-checkbox">
+                <input type="checkbox" id="bottom-text-checkbox">
+                Sin texto inferior
+            </label>
         </div>
         <div class="panel-settings">
             <!-- Font options-->
             <h4>FUENTE</h4>
             <label for="fonts"></label>
-            <select name="fonts" id="fonts">
+            <select class="selector" name="fonts" id="fonts">
                 <option value="arial">Arial</option>
                 <option value="arial black">Arial black</option>
                 <option value="american typewriter">American typewriter</option>
@@ -183,9 +183,9 @@
                 </div>
                 <!-- Text alignment buttons -->
                 <div class="buttons-container">
-                    <button id="left-btn"><i class="fa-solid fa-align-left"></i></button>
-                    <button id="center-btn"><i class="fa-solid fa-align-center"></i></button>
-                    <button id="right-btn"><i class="fa-solid fa-align-right"></i></button>
+                    <button id="left-btn"><i class="fa-solid fa-align-left align-btn"></i></button>
+                    <button id="center-btn"><i class="fa-solid fa-align-center align-btn"></i></button>
+                    <button id="right-btn"><i class="fa-solid fa-align-right align-btn"></i></button>
                 </div>
             </div>
         </div>
@@ -209,11 +209,12 @@
                 </div>
             </div>
         </div>
-        <!-- background text meme container checkbox -->
+        <!-- background text transparent checkbox -->
         <div class="flex-container">
-            <label for="background-checkbox"></label>
-            <input type="checkbox" id="background-checkbox">
-            <small>Fondo transparente</small>
+            <label for="background-checkbox">
+                <input type="checkbox" id="background-checkbox">
+                Fondo transparente
+            </label>
         </div>
         <div class="panel-settings">
             <!-- Outline buttons-->
