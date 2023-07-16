@@ -238,10 +238,16 @@ const backgroundCheckbox = document.getElementById("background-checkbox");
 const hideTextBackground = () => {
     if (backgroundCheckbox.checked) {
         topTextBackground.style.backgroundColor = "transparent";
+        topTextBackground.style.position = "absolute";
+        topTextBackground.style.top = "0";
         bottomTextBackground.style.backgroundColor = "transparent";
+        bottomTextBackground.style.position = "absolute";
+        bottomTextBackground.style.bottom = "0";
     } else {
         topTextBackground.style.backgroundColor = `${textBackgroundInput.value}`;
+        topTextBackground.style.position = "static";
         bottomTextBackground.style.backgroundColor = `${textBackgroundInput.value}`;
+        bottomTextBackground.style.position = "static";
     }
 };
 
