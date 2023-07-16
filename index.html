@@ -129,7 +129,7 @@
                     <label for="negative">NEGATIVO</label>
                     <input type="range" id="negative" min="0" max="1" step="0.1" value="0">
                 </div>
-                <button id="restart-btn">
+                <button class="panel-btn" id="restart-btn">
                     Restart filters
                 </button>
             </div>
@@ -189,16 +189,16 @@
                 </div>
             </div>
         </div>
-        <div class="flex-container space">
-            <div>
+        <div class="flex-container space background-color-text-container">
                 <!-- Text color input-->
-                <h4>COLOR</h4>
-                <div class="color-container flex-container align-center">
-                    <label for="color-text-input"></label>
-                    <input type="color" class="color-picker" id="text-color-input">
-                    <span id="text-color-name">#FFFFFF</span>
-                </div>
-            </div>
+                <div>
+                    <h4>COLOR</h4>
+                    <div class="color-container flex-container align-center">
+                        <label for="color-text-input"></label>
+                        <input type="color" class="color-picker" id="text-color-input">
+                        <span id="text-color-name">#FFFFFF</span>
+                    </div>
+                </div>     
             <div>
                 <!-- Background color text input -->
                 <h4>FONDO</h4>
@@ -219,9 +219,12 @@
         <div class="panel-settings">
             <!-- Outline buttons-->
             <h4>CONTORNO</h4>
-            <button id="text-outline-none">Ninguno</button>
-            <button id="text-outline-light">Claro</button>
-            <button id="text-outline-dark">Oscuro</button>
+            <div class="outline-btn flex-container">
+                <button class="outline-btn panel-btn" id="text-outline-none">Ninguno</button>
+                <button  class="outline-btn panel-btn" id="text-outline-light">Claro</button>
+                <button  class="outline-btn panel-btn" id="text-outline-dark">Oscuro</button>
+            </div>
+            
         </div>
         <div class="panel-settings">
             <!-- Spacing -->
