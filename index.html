@@ -37,11 +37,10 @@
             <img class="logo" src="images/meme2.png" alt="meme dog">
             <h1>Generador de memes</h1>
         </div>
-        <div class="header-buttons-container">
-            <button id="image-panel-btn"><i class="fa-sharp fa-regular fa-file-image"></i>Imagen</button>
-            <button id="text-panel-btn"><i class="fa-solid fa-font"></i>Texto</button>
-            <!-- <button id="dark-mode-btn" class="hidden"> <i class="fa-solid fa-moon"></i>Modo oscuro</button> -->
-            <button id="mode-btn"><i class="fa-regular fa-sun"></i>Modo claro</button>
+        <div class="header-buttons-container flex-container">
+            <button class="header-btn" id="image-panel-btn"><i class="fa-sharp fa-regular fa-file-image"></i>Imagen</button>
+            <button class="header-btn" id="text-panel-btn"><i class="fa-solid fa-font"></i>Texto</button>
+            <button class="header-btn" id="mode-btn"><i class="fa-regular fa-sun"></i>Modo claro</button>
         </div>
     </header>
     <!-- MAIN -->
@@ -65,7 +64,7 @@
         <div class="panel-settings">
             <h4>URL</h4>
             <label for="image-url"></label>
-            <input type="text" id="image-url" placeholder="Insert URL">
+            <input type="text" id="image-url" placeholder="Insert image URL">
         </div>
         <div class="panel-settings">
             <!--image  background -->
@@ -176,20 +175,20 @@
                 <option value="times new roman">Times New Roman</option>
             </select>
             <!--  font size input -->
-            <div class="flex-container">
+            <div class="panel-settings flex-container">
                 <div>
                     <label for="input-font-size"></label>
                     <input class="input-number" type="number" id="input-font-size" min="12" value="20">
                 </div>
                 <!-- Text alignment buttons -->
                 <div class="buttons-container">
-                    <button id="left-btn"><i class="fa-solid fa-align-left align-btn"></i></button>
-                    <button id="center-btn"><i class="fa-solid fa-align-center align-btn"></i></button>
-                    <button id="right-btn"><i class="fa-solid fa-align-right align-btn"></i></button>
+                    <button class="align-btn" id="left-btn"><i class="fa-solid fa-align-left"></i></button>
+                    <button class="align-btn" id="center-btn"><i class="fa-solid fa-align-center"></i></button>
+                    <button class="align-btn" id="right-btn"><i class="fa-solid fa-align-right"></i></button>
                 </div>
             </div>
         </div>
-        <div class="flex-container space background-color-text-container">
+        <div class="panel-settings flex-container space background-color-text-container">
                 <!-- Text color input-->
                 <div>
                     <h4>COLOR</h4>
@@ -219,7 +218,7 @@
         <div class="panel-settings">
             <!-- Outline buttons-->
             <h4>CONTORNO</h4>
-            <div class="outline-btn flex-container">
+            <div class="outline-btn-container flex-container">
                 <button class="outline-btn panel-btn" id="text-outline-none">Ninguno</button>
                 <button  class="outline-btn panel-btn" id="text-outline-light">Claro</button>
                 <button  class="outline-btn panel-btn" id="text-outline-dark">Oscuro</button>
