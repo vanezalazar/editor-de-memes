@@ -128,7 +128,6 @@ h1 {
 }
 
 .header-btn {
-    margin: 0px 5px 0px 5px;
     margin: 10px;
 }
 .header-btn:hover {
@@ -368,11 +367,15 @@ input[type="range"] {
 
     .download-btn {
         font-size: 12px;
+        width: 50%;
     }
 }
 @media screen and (max-width: 380px) {
     .header-buttons-container {
         align-self: center;
+    }
+    .header-btn {
+        margin: 5px;
     }
     .align-btn {
         margin: 3px;
