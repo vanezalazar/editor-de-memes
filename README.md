@@ -1,6 +1,6 @@
 # Generador de memes
 
-![gif gato ](https://media4.giphy.com/media/o0vwzuFwCGAFO/200w.webp?cid=ecf05e47jlwy45516ecumel01gw0w6t0e61ilq9qp9q30e4o&ep=v1_gifs_search&rid=200w.webp&ct=g){width=50px height=50px}
+![gif gato ](https://media4.giphy.com/media/o0vwzuFwCGAFO/200w.webp?cid=ecf05e47jlwy45516ecumel01gw0w6t0e61ilq9qp9q30e4o&ep=v1_gifs_search&rid=200w.webp&ct=g)
 
 # Contenido
 
