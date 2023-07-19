@@ -6,6 +6,7 @@
 
 -   [Descripción](#descripción)
 -   [Características](#características)
+-   [Previsualización](#previsualización)
 -   [Guía de uso](#guía-de-uso)
 -   [Instrucciones para clonar repositorio](#instrucciones-para-clonar-repositorio)
 -   [Tecnologías ](#tecnologías)
@@ -23,10 +24,19 @@ Editor de memes, proyecto final del segundo módulo : JavaScript, de Desarrollo 
 -   **Panel de texto** : este panel, permite ingresar y editar el texto superior e inferior del meme, como tipo de fuente, tamaño, color y fondo entre otras características.Cuenta con diferentes opciones para personalizarlo según las preferencias del usuario.
 -   **Descarga del meme** : permite la descarga del meme personalizado en formato de imagen.
 
+## Previsualización
+
+![app preview ](images/meme-generator-preview)
+![app preview ](images/meme-generator-preview2)
+
+### Versión mobile
+
+![app mobile preview ](images/meme-generator-mobile)
+
 ## Guía de uso
 
 -   Al cargar la aplicación, se verá una interfaz que consta de dos paneles de edición : de texto e imagen y una vista previa del meme.
--   En el panel de imagen ingresar la dirección URL de la imagen.Se le pueden añadir filtros a la imágen según preferencias.Hay imágenes que por derechos de autor no se permiten descargar.
+-   En el panel de imagen ingresar la dirección URL de la imagen.Se le pueden añadir filtros a la imagen según preferencias.Hay imágenes que por derechos de autor no se permiten descargar.
 -   En el panel de texto, modificar el texto de ambas secciones según tus preferencias.
 -   A medida que realizas cambios en el texto e imagen, la vista previa se actualizará automáticamente para mostrarte cómo se verá tu meme finalizado.
 -   Una vez logrado el resultado, haz clic en el botón "Descargar meme".
@@ -37,7 +47,7 @@ Editor de memes, proyecto final del segundo módulo : JavaScript, de Desarrollo 
 Para clonar este repositorio en tu equipo local sigue los siguientes pasos:
 
 1. Navega a la página principal del repositorio
-2. Encima de la lista de archivos, haz clic en <> Código (El botón verde).
+2. Arriba de la lista de archivos, haz clic en <> Code (Botón verde).
 3. Copia la dirección URL del repositorio.
 4. Abrir Git Bash.
 5. Cambiar el directorio de trabajo actual a la ubicación en donde quieres clonar el directorio.
