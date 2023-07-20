@@ -21,7 +21,7 @@ Editor de memes, proyecto final del segundo módulo : JavaScript, de Desarrollo 
 
 -   **Acerca del editor** : cuenta con una interfaz donde se visualiza una vista previa del meme junto a un botón de descarga y dos paneles : uno de texto y otro de imagen.Cuenta con modo oscuro y modo claro y el diseño es responsivo.
 -   **Panel de imagen** : este panel permite ingresar y editar la imagen como su color de fondo y diferentes tipos de filtros.
--   **Panel de texto** : este panel, permite ingresar y editar el texto superior e inferior del meme, como tipo de fuente, tamaño, color y fondo entre otras características.Cuenta con diferentes opciones para personalizarlo según las preferencias del usuario.
+-   **Panel de texto** : este panel, permite ingresar y editar el texto superior e inferior del meme, como tipo de fuente, tamaño, color y fondo entre otros.Cuenta con diferentes opciones para personalizarlo según las preferencias del usuario.
 -   **Descarga del meme** : permite la descarga del meme personalizado en formato de imagen.
 
 ## Previsualización
@@ -50,8 +50,8 @@ Para clonar este repositorio en tu equipo local sigue los siguientes pasos:
 3. Copia la dirección URL del repositorio.
 4. Abrir Git Bash.
 5. Cambiar el directorio de trabajo actual a la ubicación en donde quieres clonar el directorio.
-6. Escriba git clone y pegue la dirección URL que ha copiado antes.
-7. Presione Enter para crear el clon local.
+6. Escribir git clone y pegar la dirección URL.
+7. Presionar Enter para crear el clon local.
 
 ## Tecnologías
 
