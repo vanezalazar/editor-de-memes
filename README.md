@@ -25,13 +25,12 @@ Editor de memes, proyecto final del segundo módulo : JavaScript, de Desarrollo 
 -   **Descarga del meme** : permite la descarga del meme personalizado en formato de imagen.
 
 ## Previsualización
-
-![app preview ](images/meme-generator-preview)
-![app preview ](images/meme-generator-preview2)
+![app preview](images/meme-generator-preview.jpg)
+![app preview](images/meme-generator-preview2.jpg)
 
 ### Versión mobile
 
-![app mobile preview ](images/meme-generator-mobile)
+![app mobile preview ](images/meme-generator-mobile.jpg)
 
 ## Guía de uso
 
